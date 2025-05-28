@@ -18,8 +18,8 @@ public class SimpleBeanRegistry {
     }
 
     public Object getBean( Class<?> clazz ) {
-        BeanDefinition def = Optional.of( contaisBean( clazz ) )
-                .orElseThrow( ( ) -> new NotRegisteredBeanDefinition( "Not registered Bean " + clazz.getSimpleName( ) ) );
+        BeanDefinition def = Optional.ofNullable( contaisBean( clazz ) )
+                .orElseThrow( ( ) -> new NotRegisteredBeanDefinition( "Not registered bean with name: " + clazz.getSimpleName( ) ) );
 
         if ( def.isSingleton( ) ) {
             if ( def.getInstance( ) == null ) {
