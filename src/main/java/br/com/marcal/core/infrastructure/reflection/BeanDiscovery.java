@@ -9,9 +9,13 @@ import io.github.classgraph.ScanResult;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-public class BeanScanner {
+public class BeanDiscovery {
 
-    private SimpleBeanRegistry beanRegistry;
+    private final SimpleBeanRegistry beanRegistry;
+
+    public BeanDiscovery( SimpleBeanRegistry beanRegistry ) {
+        this.beanRegistry = beanRegistry;
+    }
 
     public void registerApplicationBeans( ) {
         Set<Class<?>> beanAnnotations = Set.of( Component.class, Controller.class );
