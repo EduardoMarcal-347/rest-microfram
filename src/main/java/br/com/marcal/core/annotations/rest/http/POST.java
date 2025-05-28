@@ -1,4 +1,4 @@
-package br.com.marcal.core.rest.annotations.methods;
+package br.com.marcal.core.annotations.rest.http;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -7,6 +7,6 @@ import java.lang.annotation.Target;
 
 @Retention( RetentionPolicy.RUNTIME )
 @Target( ElementType.METHOD )
-public @interface GET {
+public @interface POST {
     String endpoint( ) default "";
 }

@@ -1,6 +1,5 @@
-package br.com.marcal.core;
+package br.com.marcal.core.infrastructure.http;
 
-import br.com.marcal.core.rest.annotations.HTTPMethod;
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 

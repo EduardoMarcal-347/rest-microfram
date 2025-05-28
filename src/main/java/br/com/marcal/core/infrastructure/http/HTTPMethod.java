@@ -1,4 +1,4 @@
-package br.com.marcal.core.rest.annotations;
+package br.com.marcal.core.infrastructure.http;
 
 import br.com.marcal.core.exceptions.InvalidHttpMethod;
 
